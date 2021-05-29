@@ -2366,7 +2366,7 @@ function Material.Load(Config)
 					TweenService:Create(SliderFill, TweenInfo.new(0.15), {Size = UDim2.fromScale(Px, 1)}):Play()
 					SliderFadedDot.Size = UDim2.fromOffset(SizeFromScale,SizeFromScale)
 					SliderFadedDot.Position = UDim2.fromScale(0.5,0.5) - UDim2.fromOffset(SizeFromScale/2,SizeFromScale/2)
-					SliderValue.Text = Value
+					SliderValue.Text = tostring(Value)
 					SliderCallback(Value)
 				end)
 				MouseKill = InputService.InputEnded:Connect(function(UserInput)
