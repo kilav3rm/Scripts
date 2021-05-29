@@ -2301,7 +2301,7 @@ function Material.Load(Config)
 			SliderTitle.Parent = Slider
 
 			local SliderValue = Objects.new("Label")
-			SliderValue.Text = tostring(SliderDef)
+			SliderValue.Text = SliderDef
 			SliderValue.TextColor3 = Theme.SliderAccent
 			SliderValue.TextTransparency = 1
 			SliderValue.TextSize = 14
