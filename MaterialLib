@@ -1,3 +1,9 @@
+-- For rounding the slider value
+local function roundTo(a, b)
+	local result = (math.floor(a / b) * b)
+	return result
+end
+----------------------------------------------------------
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
 
@@ -2360,7 +2366,8 @@ function Material.Load(Config)
 				MouseMove = Mouse.Move:Connect(function()
 					local Px = GetXY(SliderTracker)
 					local SizeFromScale = (MinSize +  (MaxSize - MinSize)) * Px
-					local Value = math.abs(SliderMin + ((SliderMax - SliderMin) * Px))
+					local Number = math.abs(SliderMin + ((SliderMax - SliderMin) * Px))
+					local Value = roundTo(Number/0.05)
 					SizeFromScale = SizeFromScale - (SizeFromScale % 2)
 					TweenService:Create(SliderDot, TweenInfo.new(0.15), {Position = UDim2.fromScale(Px,0.5) - UDim2.fromOffset(5,5)}):Play()
 					TweenService:Create(SliderFill, TweenInfo.new(0.15), {Size = UDim2.fromScale(Px, 1)}):Play()
