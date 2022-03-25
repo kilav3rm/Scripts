@@ -16,9 +16,9 @@ local objects = {}
 local themes = {
 	Background = Color3.fromRGB(21, 21, 21),
 	Glow = Color3.fromRGB(255, 0, 0),
-	Accent = Color3.fromRGB(255, 0, 0),
-	LightContrast = Color3.fromRGB(170, 255, 0),
-	DarkContrast = Color3.fromRGB(0, 0, 255),  
+	Accent = Color3.fromRGB(0, 0, 0),
+	LightContrast = Color3.fromRGB(71, 71, 71),
+	DarkContrast = Color3.fromRGB(71, 71, 71),  
 	TextColor = Color3.fromRGB(255, 255, 255)
 }
 
