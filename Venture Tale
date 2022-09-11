@@ -64,12 +64,12 @@ local ItemTypes = {
 local finishedLevel = false
 local nodeHolder    = Instance.new("Folder")
 local mySettings    = {
-    Mode  = "Walk",
+    Mode  = "SmartTween",
     isFarming = true,
-    showNodes   = true,
+    showNodes   = false,
     killAura    = true,
-    tweenSpeed  = 14,
-    pathNodeGap = 4.2,
+    tweenSpeed  = 16,
+    pathNodeGap = 10,
 }
 local SettingsController    = getsenv(Gui:WaitForChild("Settings").SettingsController)
 local CreateDropdown    = SettingsController.CreateDropdown
